@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+    database:
+        image: redis
+        container_name: redis_test_n3hub
+        ports:
+            - "6379:6379"
+    app:
+        build:
+            context: .
+            dockerfile: api.dockerfile
+        image: api_n3
+        ports:
+            - "5000:5000"
+        container_name: api_test_n3hub
+        links:
+            - database
+        env_file:
+          - api.env
+        depends_on:
+          - database
