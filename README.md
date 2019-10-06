@@ -57,6 +57,15 @@ docker-compose up --build
 Create a terraform directory which will contain the configuration files and bring the project live into Amazon ECS.
 Bonus: Use remote state file.
 
-### Solution: (IN PROGRESS)
-
+### Solution:
+Inside the terraform folder, run the following commands (assume you have setup the access key and the secret key)
+```
+terraform init
+terraform plan -out=n3.plan
+terraform apply "n3.plan"
+```
+To clean up
+```
+terraform destroy
+```
 
