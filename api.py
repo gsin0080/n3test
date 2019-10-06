@@ -54,6 +54,10 @@ def add_value():
     # Return HTTP 202 when success
     return make_response(jsonify({'success': 'Key/Value pair is added'}), 202)
 
+@api.route('/')
+def index():
+    return "Hello World"
+
 @api.errorhandler(404)
 def not_found(error):
     return make_response(jsonify({'error': 'Not found'}),404)
