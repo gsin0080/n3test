@@ -1,6 +1,4 @@
-# n3 DevOps Test
-
-## Mini Rest API (api.py)
+# Mini Rest API (api.py)
 Write a python3 script that starts up a RESTfull application and listen to HTTP request on port 5000. Use redis to store data .
 You must create two endpoints ​/key ​and​ /key/<KEY>​ which support two verbs:
 
